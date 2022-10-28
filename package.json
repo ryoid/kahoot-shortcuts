@@ -1,12 +1,12 @@
 {
   "name": "vite-solid-crxjs-boilerplate",
-  "displayName": "Solid Chrome Extension Boilerplate",
+  "displayName": "Kahoot Shortcuts",
   "version": "0.0.1",
-  "description": "Chrome Extension boilerplate with SolidJS + Vite + CRXJS",
+  "description": "Kahoot Shortcuts",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ryoid/vite-solid-crxjs-boilerplate.git"
+    "url": "https://github.com/ryoid/khaoot-shortcuts.git"
   },
   "type": "module",
   "scripts": {
@@ -15,7 +15,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "solid-js": "^1.4.8"
+    "solid-js": "^1.4.8",
+    "solid-toast": "^0.3.5"
   },
   "devDependencies": {
     "@crxjs/vite-plugin": "^1.0.14",
@@ -24,7 +25,10 @@
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.1",
+    "autoprefixer": "^10.4.13",
     "babel-preset-solid": "^1.4.8",
+    "postcss": "^8.4.18",
+    "tailwindcss": "^3.2.1",
     "typescript": "^4.6.4",
     "vite": "^3.0.7",
     "vite-plugin-solid": "^2.3.0"

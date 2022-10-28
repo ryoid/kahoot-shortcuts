@@ -12,9 +12,7 @@ const [major, minor, patch, label = "0"] = version
 export default defineManifest(async (env) => ({
   manifest_version: 3,
   name:
-    env.mode !== "production"
-      ? "[DEV] CRXJS Solid Vite Extension"
-      : "CRXJS Solid Vite Extension",
+    env.mode !== "production" ? "[DEV] Kahoot Shortcuts" : "Kahoot Shortcuts",
   // up to four numbers separated by dots
   version: `${major}.${minor}.${patch}.${label}`,
   // semver is OK in "version_name"
@@ -22,7 +20,13 @@ export default defineManifest(async (env) => ({
   icons: {
     "128": "icons/128x128.png",
   },
-  action: {
-    default_popup: "src/pages/popup/index.html",
-  },
+  // action: {
+  //   default_popup: "src/pages/popup/index.html",
+  // },
+  content_scripts: [
+    {
+      js: ["src/pages/kahoot/index.tsx"],
+      matches: ["https://kahoot.it/*"],
+    },
+  ],
 }));
